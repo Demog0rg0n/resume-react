@@ -1,0 +1,22 @@
+.footer{
+    padding: 50px 0;
+}
+.contactLinks{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+.contactLink img{
+    height: 60px;
+}
+.contactLink:hover{
+    transform: translateY(5px);
+}
+.phoneNumber{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
