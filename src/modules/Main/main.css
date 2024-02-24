@@ -159,6 +159,7 @@
 }
 
 
+
 @media (max-width: 960px) {
     .stack__elem{
         width: calc((100% - 40px) / 3);
