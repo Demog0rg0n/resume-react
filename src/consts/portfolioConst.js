@@ -1,4 +1,3 @@
-import filmtubeImg from "../images/filmtube.png"
 import todoImg from "../images/todo.png"
 import rumtibet from "../images/rumtibet.png"
 
@@ -10,7 +9,7 @@ export const portfolioItems = [
         gitLink: "https://github.com/Demog0rg0n/FilmTube", 
         link: "https://film-tube.vercel.app/", 
         type: "React/JS", 
-        img: filmtubeImg,
+        img: todoImg,
     },
     {
         title: "todos", 
