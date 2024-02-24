@@ -21,12 +21,21 @@ const Skills = () => {
                 <Swiper 
                     ref={swiperRef}
                     spaceBetween={20}
-                    slidesPerView={3}
+                    slidesPerView={1}
                     className="stack-swiper"
                     modules={[Autoplay]}
                     loop={true}
                     autoplay={{
                         delay: 3000
+                    }}
+
+                    breakpoints={{
+                        820: {
+                            slidesPerView: 3
+                        },
+                        560: {
+                            slidesPerView: 2
+                        }
                     }}
                 >
                     {

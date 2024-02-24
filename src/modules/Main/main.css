@@ -160,17 +160,6 @@
 
 
 
-@media (max-width: 960px) {
-    .stack__elem{
-        width: calc((100% - 40px) / 3);
-        height: auto;
-    }
-}
-@media (max-width: 580px) {
-    .stack__elem{
-        width: calc((100% - 20px) / 2);
-    }
-}
 
 
 
@@ -182,11 +171,6 @@
 
 
 
-.remark{
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-}
 .portfolio{
     background-color: #2d2d2d;
     width: 100%;
@@ -221,6 +205,8 @@
     position: relative;
     width: 100%;
     transition: .1s linear;
+    height: 470px;
+    background-color: #828282;
 }
 .portfolio__elem__bg{
     position: absolute;
@@ -228,8 +214,7 @@
     width: 0;
     z-index: 0;
     transition: .2s linear;
-    opacity: 0.5;
-    left: 0;
+    opacity: 0.5;    
     top: 0;
 }
 .portfolio__elem__bg{
@@ -242,12 +227,7 @@
     left: 0;
     top: 0;
 }
-.portfolio__elem:hover .portfolio__elem__bg{
-    z-index: 5;  
-    background-color: #000;
-    opacity: 0.8;
-    width: 100%;
-}
+
 .portfolio__elem::after{
     content: counter(num);
     counter-increment: num;
@@ -334,12 +314,22 @@
 }
 .portfolio__elem__preview{
     display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 .portfolio__elem__img{
     width: 100%;
     transition: .1s linear;
     margin: 0;
     display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    object-fit: cover;
 }
 .portfolio__elem__links{
     display: flex;
@@ -352,21 +342,51 @@
     color: #fff;
 }
 
-@media (min-width: 768px) {
-    .portfolio__elem:hover .portfolio__elem__content {
-        transform: scale(1.1);
+@media (hover: none) {
+    .portfolio__elem__content{
+        gap: 0px;
+        width: 100%;
+        left: initial;
+        right: 0;
+        bottom: 0;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .portfolio__elem:nth-child(2n - 1) .portfolio__elem__content{
+        right: 0;
+    }
+}
+@media (hover: hover) {
+    @media (min-width: 768px) {
+        .portfolio__elem:hover .portfolio__elem__content {
+            transform: scale(1.1);
+        }
+    }
+
+    .portfolio__elem:hover .portfolio__elem__bg{
+        z-index: 5;  
+        background-color: #000;
+        opacity: 0.8;
+        width: 100%;
     }
 }
 
+
+
 @media (max-width: 768px) {
     .portfolio__elem__content{
-        position: relative;
-        left: 0;
-        top: 0;
-        right: initial!important;
-        background-color: rgba(0, 0, 0, 0.3);
-        padding: 15px;
+        gap: 0px;
+        width: 100%;
+        left: initial;
+        right: 0;
+        bottom: 0;
+        padding: 30px;
+
     }
+    .portfolio__elem:nth-child(2n - 1) .portfolio__elem__content{
+        right: 0;
+    }
+
     .portfolio__elem__title{
         font-size: 28px;
     }
